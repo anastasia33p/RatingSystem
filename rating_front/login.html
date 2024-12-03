@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход / Регистрация</title>
+    <link rel="stylesheet" href="styles_login.css">
+</head>
+<body class="login-body">
+<div class="login-container">
+    <h1>Вход</h1>
+    <form id="login-form">
+        <label for="username">Введите логин</label>
+        <input type="text" id="username" name="username"
+               placeholder="Ваш логин" required>
+
+        <label for="password">Введите пароль</label>
+        <input type="password" id="password" name="password"
+               placeholder="Ваш пароль" required>
+
+        <button type="submit">Войти</button>
+    </form>
+</div>
+</body>
+
+<script>
+    document.getElementById('login-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            const response = await fetch('http://localhost:8080/auth', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "username": username,
+                    "password": password
+                }),
+            });
+
+            if (response.ok) {
+                response.json().then(value => {
+                    localStorage.setItem('token', value.token);
+                    alert('Авторизация успешна!');
+                    window.location.href = 'admin.html';
+                }).catch(reason => {
+                    alert(`Ошибка авторизации`);
+                })
+            } else {
+                alert(`Ошибка авторизации`);
+            }
+        } catch (error) {
+            console.error('Ошибка:', error);
+            alert('Произошла ошибка. Попробуйте снова позже.');
+        }
+    });
+</script>
+</html>

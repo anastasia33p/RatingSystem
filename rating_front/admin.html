@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель</title>
+    <link rel="stylesheet" href="styles_admin.css">
+    <link rel="stylesheet" href="styles_login.css">
+</head>
+<body>
+<header>
+    <h1>Админ-панель</h1>
+    <nav>
+        <a href="index.html">На главную</a>
+        <a href="leaderboard.html">К таблице лидеров</a>
+        <img src="res/user-icon.svg" alt="Иконка пользователя" width="30"
+             height="30">
+    </nav>
+</header>
+
+
+<main>
+    <h2>Управление пользователями</h2>
+    <section>
+        <form id="search-player" action="#" method="GET">
+            <input type="text" placeholder="Введите имя игрока" name="search"
+                   id="search"/>
+            <button type="submit">Искать</button>
+        </form>
+    </section>
+    <table>
+        <thead>
+        <tr>
+            <th>Позиция</th>
+            <th>Имя пользователя</th>
+            <th>Очки</th>
+            <th>Уровень</th>
+            <th>Действия</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <section>
+        <form id="page-form" action="#" method="GET" style="justify-content: right">
+            <label for="page">Страница:</label>
+            <input type="number" id="page" name="page" min="1" max="100"
+                   value="1">
+            <button type="submit">Перейти</button>
+        </form>
+    </section>
+</main>
+
+<div id="editDialog" class="login-container hidden">
+    <form id="editForm">
+        <label for="editUsername">Имя пользователя:</label>
+        <input type="text" id="editUsername" required>
+
+        <label for="editScore">Очки:</label>
+        <input type="number" id="editScore" required>
+
+        <label for="editLevel">Уровень:</label>
+        <input type="number" id="editLevel" required>
+
+        <button type="submit">Сохранить</button>
+        <button type="button" id="cancelEdit">Отмена</button>
+    </form>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

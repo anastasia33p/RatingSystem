@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); /* Подключение шрифта */
+@font-face {
+    font-family: 'Code Next-Trial-SemiBold';
+    src: url('res/CodeNext-Trial-SemiBold.ttf') format('opentype');
+}
+
+/* Общие стили */
+body {
+    font-family: 'Code Next-Trial-SemiBold', sans-serif;
+    background-color: #EDF1F6; /* Цвет Porcelain */
+    color: #081F5C; /* Цвет Midnight */
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #334EAC; /* Цвет Royal */
+    padding: 20px 40px; /* Увеличенные отступы */
+}
+
+header h1 {
+    margin: 0;
+    color: #FFF9F0; /* Цвет Jicama */
+    font-size: 1.8em; /* Увеличение размера шрифта */
+}
+
+header nav a {
+    color: #FFF9F0; /* Цвет Jicama */
+    text-decoration: none;
+    margin-left: 20px; /* Увеличенный отступ между ссылками */
+    font-size: 1.2em;
+}
+
+header nav img {
+    vertical-align: middle;
+}
+
+/* Стили для основного текста */
+main {
+    padding: 40px; /* Увеличенный отступ */
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+}
+
+main section p {
+    line-height: 1.8;
+    margin-bottom: 20px; /* Отступы между абзацами */
+}
+
+/* Стили для кнопки */
+button {
+    font-family: 'Code Next-Trial-SemiBold', sans-serif;
+    background-color: #081F5C; /* Цвет Midnight */
+    color: #FFF9F0; /* Цвет Jicama */
+    font-size: 1.4em; /* Увеличенный шрифт */
+    padding: 15px 30px; /* Увеличенные отступы кнопки */
+    border: none;
+    border-radius: 30px; /* Закругление краёв */
+    cursor: pointer;
+    display: block; /* Чтобы кнопка была блочным элементом */
+    margin: 40px auto; /* Центрирование кнопки */
+    text-align: center;
+}
+
+button:hover {
+    background-color: #334EAC; /* Цвет Royal */
+}

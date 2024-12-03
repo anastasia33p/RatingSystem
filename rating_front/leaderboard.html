@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейтинг и таблица лидеров</title>
+    <link rel="stylesheet" href="styles_board.css"> <!-- Подключение стилей -->
+</head>
+<body>
+<!-- Header -->
+<header>
+    <h1>Рейтинг и таблица лидеров</h1>
+    <nav>
+        <a href="index.html">На главную</a>
+        <a href="login.html">
+            <img src="res/user-icon.svg" alt="Вход для пользователя" width="24" height="24">
+        </a>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+    <!-- Поиск игрока -->
+    <section>
+        <h2>Поиск игрока</h2>
+        <form id="search-player" action="#" method="GET">
+            <input type="text" placeholder="Введите имя игрока" name="search"
+                   id="search"/>
+            <button type="submit">Искать</button>
+        </form>
+    </section>
+
+    <!-- Сортировка и фильтрация -->
+    <section>
+        <h2>Сортировка</h2>
+        <form id="sort-filter" action="#" method="GET">
+            <label for="sort">Сортировать по:</label>
+            <select id="sort" name="sort">
+                <option value="position">ID</option>
+                <option value="score">Очкам</option>
+                <option value="level">Уровню</option>
+            </select>
+            <button type="submit">Применить</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Общая таблица лидеров</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Позиция</th>
+                <th>Имя</th>
+                <th>Очки</th>
+                <th>Уровень</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+
+    <section style="margin-top: 25px">
+        <form id="page-form" action="#" method="GET" style="justify-content: right">
+            <label for="page">Страница:</label>
+            <input type="number" id="page" name="page" min="1" max="100"
+                   value="1">
+            <button type="submit">Перейти</button>
+        </form>
+    </section>
+</main>
+
+<script src="leaderboard.js"></script>
+</body>
+</html>

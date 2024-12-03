@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); /* Подключение шрифта */
+@font-face {
+    font-family: 'Code Next-Trial-SemiBold';
+    src: url('res/CodeNext-Trial-SemiBold.ttf') format('opentype');
+}
+
+/* Общие стили */
+body {
+    font-family: 'Code Next-Trial-SemiBold', sans-serif;
+    background-color: #EDF1F6; /* Цвет Porcelain */
+    color: #081F5C; /* Цвет Midnight */
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #334EAC; /* Цвет Royal */
+    padding: 20px 40px;
+}
+
+header h1 {
+    margin: 0;
+    color: #FFF9F0; /* Цвет Jicama */
+    font-size: 1.8em;
+}
+
+header nav a {
+    color: #FFF9F0; /* Цвет Jicama */
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+header nav img {
+    vertical-align: middle;
+}
+
+/* Основное содержимое */
+main {
+    padding: 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Стили для секции поиска */
+section form {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Отступы между элементами */
+    margin-bottom: 30px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #BAD6EB; /* Цвет Sky */
+    border-radius: 5px;
+    width: 300px;
+}
+
+form input[type="number"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #BAD6EB; /* Цвет Sky */
+    border-radius: 5px;
+    width: fit-content;
+}
+
+form select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #BAD6EB; /* Цвет Sky */
+    border-radius: 5px;
+}
+
+form button {
+    font-family: 'Code Next-Trial-SemiBold', sans-serif;
+    background-color: #081F5C; /* Цвет Midnight */
+    color: #FFF9F0; /* Цвет Jicama */
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #334EAC; /* Цвет Royal */
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #FFF; /* Белый фон таблицы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+table th,
+table td {
+    border: 1px solid #BAD6EB; /* Цвет Sky */
+    padding: 10px 15px;
+    text-align: left;
+}
+
+table th {
+    background-color: #334EAC; /* Цвет Royal */
+    color: #FFF9F0; /* Цвет Jicama */
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #EDF1F6; /* Цвет Porcelain для чётных строк */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #FFF; /* Белый для нечётных строк */
+}
